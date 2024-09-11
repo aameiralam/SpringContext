@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="V6Engine" class="com.springLearning.Vehicle.V6Engine" />
+    <bean id="V8Engine" class="com.springLearning.Vehicle.V8Engine" />
+    <bean id="AutomaticTransmission" class="com.springLearning.Vehicle.AutomaticTransmission"/>
+
+
+    <bean id="carV6" class="com.springLearning.Vehicle.Car">
+            <constructor-arg index="0" ref="V6Engine"/>
+        <constructor-arg index = "1" ref="AutomaticTransmission"/>
+    </bean>
+
+    <bean id="Iphone14" class="Phone.Iphone14"/>
+
+    <bean id="Iphone15" class="Phone.Iphone15"/>
+
+</beans>
